@@ -36,11 +36,11 @@ Student.prototype.addMarks = function (...mark) {
 
 Student.prototype.getAverage = function() {
   let average = this.marks.reduce((sum, current) => (sum + current)) / this.marks.length;
-  return average.toFixed(3);
+  return average;
 }
 
 Student.prototype.exclude = function(reason) {
   delete this.marks;
   delete this.subject;
-  this.exclude = reason;
+  this.excluded = reason;
 }
